@@ -12,4 +12,7 @@ print(concatenated_tuple[2:6:2])
 print(concatenated_tuple[::-1])
 del my_tuple
 #print(my_tuple) will raise an error because my_tuple has been deleted
-
+n = concatenated_tuple[2:7:4]
+print(n[::-1])
+print(concatenated_tuple[6:1:-4])
+print(concatenated_tuple[::-4])
