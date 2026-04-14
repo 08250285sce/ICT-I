@@ -1,0 +1,43 @@
+#Student information management system
+
+students_list = [] #This list will store name of the students
+students_dict = {} #This dictionary will store students details
+
+#Input students details
+student_name = input("Enter student name: ") #Prompts user to enter their name
+student_age = int(input("Enter student age: ")) #Takes input from user and converts into integer
+student_grade = int(input("Enter student grade: "))
+
+#Add student details in list and dictionary
+students_list.append(student_name) #Adds name to the list
+students_dict [student_name] = {"age": student_age, "grade": student_grade} #Adds details of the student
+
+print("Student deatils have been recorded successfully") #Confirms that the student has been added
+
+#Displaying stored student details
+print("Student Details:") 
+print("Students name:", students_list) #Displays the list of student
+print("Students details:", students_dict) #Displays the details stored in the dictionary 
+
+#Search for student details 
+search_name = input("Enter the name of the student to search: ")  #Prompts user to enter their name they want to search
+if search_name in students_dict: #checks if the name is recorded in dictionary
+    print("Student Found!!") #if the name is recorded in dictionary
+    print(f"Student Name: {search_name}, Age: {students_dict[search_name]['age']}, Grade: {students_dict[search_name]['grade']}") #Displays student deatails if name is stored in dictionary
+else:
+    print("Student not found.") #informs user if student name is not found
+
+#Remove student name
+remove_name = input("Enter student name to remove: ") #prompts user to enter the name they want to remove
+if remove_name in students_dict: #checks if the name is recorded in dictionary
+
+    #Removing student name from list and dictionary if it is present
+    students_list.remove(remove_name) #Remving student name from the list
+    del students_dict[remove_name] #removing student details from dictionary
+    print("Student details removed successfully") #confirms the removal
+else:
+    print("Student not found.") #informs user if student name is not found
+
+# Display updated student information
+print("updated list of student:",students_list) # Displays the updated list.
+print("updated student details:", students_dict) # Displays the updated detailed records.

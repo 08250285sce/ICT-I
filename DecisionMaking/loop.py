@@ -23,3 +23,17 @@ for x in range(lenNew_tuple):
 set = set(li)
 for x in set:
     print(x)
+
+
+tup = ("Jhon Smith", "Jane Doe", "Alice Jhonson")
+for x in tup:
+    print(x)
+
+
+set1 = {10, 30, 20}
+for x in set1:
+    print(x)
+
+BookDetails = dict({"Python Programming": "Jhon Smith", "Python Fundamentals": "Alice Jhonson", "Python Interview Question": "Jane Doe"})
+for keys in BookDetails:
+    print(keys,BookDetails[keys])
